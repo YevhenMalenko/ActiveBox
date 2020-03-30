@@ -1,0 +1,56 @@
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "../assets/fonts" !default;
+
+$icon-linkedin-square: "\f08c";
+$icon-twitter: "\f099";
+$icon-facebook: "\f09a";
+$icon-facebook-f: "\f09a";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?d65b54');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?d65b54#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?d65b54') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?d65b54') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?d65b54##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-linkedin-square {
+  &:before {
+    content: $icon-linkedin-square; 
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter; 
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook; 
+  }
+}
+.icon-facebook-f {
+  &:before {
+    content: $icon-facebook-f; 
+  }
+}
+

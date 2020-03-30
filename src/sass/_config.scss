@@ -1,0 +1,82 @@
+// IMPORT SECTION
+
+@import "../../node_modules/normalize.css/normalize.css"; // (npm i --save-dev normalize.css)
+@import "icons.scss"; // icomoon 
+@import "../../node_modules/slick-carousel/slick/slick.scss"; //slick css
+
+
+// USER VARIABLES SECTION
+
+$accent: #e84545; // Accent Color
+$fontsize: 14px; // Body Font Size
+$textcolor: #6c7279; // Text Color
+$black: #2d3033; // Black color
+$white: #fff;
+$footertop: #3a3e64;
+$footerbottom: #313454;
+$raleway: Raleway, sans-serif; 
+$cardo: Cardo, sans-serif; 
+
+
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		src: local($fname), url($furl) format('ttf');
+	}
+}
+
+@include font('Raleway', normal, 400, '../fonts/Raleway-Regular.ttf');
+@include font('Raleway', normal, 300, '../fonts/Raleway-Light.ttf');
+@include font('Raleway', normal, 600, '../fonts/Raleway-SemiBold.ttf');
+@include font('Raleway', normal, 700, '../fonts/Raleway-Bold.ttf');
+@include font('Cardo', italic, 400, '../fonts/Cardo-Italic.ttf');
+
+
+// GENERAL DOCUMENT STYLES
+
+body {
+	font-family: $raleway;
+	font-size: $fontsize;
+	line-height: 21px;
+	color: $textcolor;
+	.lock {
+		overflow: hidden;
+	}
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+img {
+	width: 100%;
+}
+.container {
+	max-width: 1200px;
+	margin: 0px auto;
+	padding: 0 15px;
+}
+.btn__default {
+	font-size: 13px;
+	font-weight: 600;
+	background-color: $accent;
+	color: $white;
+	height: 46px;
+	line-height: 46px;
+	padding: 0 51px;
+	border-radius: 3px;
+	&:hover {
+		background-color: #e43333;
+	}
+}
